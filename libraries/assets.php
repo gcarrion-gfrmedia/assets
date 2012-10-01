@@ -84,7 +84,7 @@ class Assets {
 		self::_add_assets($files, null, 'css', $attributes);
 
 		// And process it
-		if (self::$_cache_info and self::$freeze) {}
+		if (isset(self::$_cache_info->css) and self::$freeze) {}
 		else                                      { self::_process('css'); }
 
 		// End benchmark
@@ -147,7 +147,7 @@ class Assets {
 		self::_add_assets($files, null, 'js');
 
 		// And process it
-		if (self::$_cache_info and self::$freeze) {}
+		if (isset(self::$_cache_info->js) and self::$freeze) {}
 		else                                      { self::_process('js'); }
 
 		// End benchmark
